@@ -29,12 +29,54 @@
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0;
                margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0);
                white-space: nowrap; border: 0; }
+    .scroll-hint { display: none; }
     @media (max-width: 794px) {
       .pagina { margin-bottom: 0; box-shadow: none; }
+      #pagina-01 {
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: #f9e7ec;
+      }
+      #pagina-01 img {
+        width: 100%;
+        max-height: 100dvh;
+        object-fit: contain;
+      }
+      .scroll-hint {
+        position: absolute;
+        bottom: 14px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+        color: #8c3855;
+        text-decoration: none;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        opacity: 0.8;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        animation: hintBounce 2.2s ease-in-out infinite;
+      }
+      @keyframes hintBounce {
+        0%, 100% { transform: translate(-50%, 0); }
+        50% { transform: translate(-50%, 5px); }
+      }
     }
     @media print {
       @page { size: A4 portrait; margin: 0; }
       html, body, main { width: 210mm; max-width: none; margin: 0; padding: 0; background: white; }
+      .scroll-hint { display: none !important; }
       .pagina { width: 210mm; height: 297mm; margin: 0; box-shadow: none;
                 break-after: page; page-break-after: always; overflow: hidden; }
       .pagina:last-child { break-after: auto; page-break-after: auto; }
@@ -49,6 +91,12 @@
         <img src="assets/01-capa.webp" width="1055" height="1491"
              alt="Capa: Menu Especial de Natal, 7ª edição, Toronto Cuisine Gourmet"
              loading="eager" decoding="async" fetchpriority="high">
+        <a href="#pagina-02" class="scroll-hint" aria-label="Ver cardápio">
+          <span>Role para ver o cardápio</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </a>
       </section>
       <section class="pagina" id="pagina-02" aria-label="Página 2 de 8">
         <img src="assets/02-brindes.webp" width="1055" height="1491"
