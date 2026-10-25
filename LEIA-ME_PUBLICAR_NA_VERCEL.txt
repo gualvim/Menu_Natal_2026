@@ -1,0 +1,40 @@
+MENU ESPECIAL DE NATAL — TORONTO CUISINE GOURMET
+SITE HTML ESTÁTICO / 8 PÁGINAS / FORMATO A4 VISUAL
+
+CONTEÚDO
+- index.html: página inicial do site.
+- assets/: as 8 páginas originais, convertidas para imagens WebP de alta qualidade.
+- assets/favicon.png: logo para a aba do navegador.
+- vercel.json: configuração opcional para hospedagem.
+
+A aparência das 8 páginas foi preservada como imagens completas, sem recriar
+nenhum texto, foto, logotipo ou decoração. O arquivo HTML não precisa de
+banco de dados, API, npm, framework, nem servidor especial.
+
+COMO PUBLICAR NA VERCEL (JEITO SIMPLES COM GITHUB)
+1. Descompacte este ZIP no seu computador.
+2. Crie um repositório no GitHub e envie TODOS os arquivos e a pasta assets/.
+   Importante: index.html precisa ficar na raiz do repositório.
+3. Na Vercel, clique em Add New > Project e importe esse repositório.
+4. Nas configurações do projeto, selecione Framework Preset: Other.
+   Build Command: vazio / desativado. Output Directory: deixe no padrão (raiz).
+5. Publique o projeto. A Vercel fornecerá um endereço compartilhável.
+
+COMO PUBLICAR PELO TERMINAL (ALTERNATIVA)
+1. Extraia o ZIP e abra o terminal DENTRO da pasta que contém index.html.
+2. Execute: npx vercel --prod
+3. Siga as perguntas da Vercel. O resultado é um link público para o menu.
+
+PARA ATUALIZAR O MENU
+Substitua a imagem correspondente em assets/ mantendo o mesmo nome (arquivo
+WebP) e publique novamente. A página HTML não precisa ser modificada.
+
+FUNCIONAMENTO
+- Navegação: basta rolar para baixo; no celular ocupa a largura total.
+- Desktop: páginas centralizadas com largura limitada para manter o formato A4.
+- Impressão: cada página é dimensionada para uma folha A4, sem cortes.
+- As imagens abrem offline se você abrir index.html localmente, após extrair o ZIP.
+
+OBSERVAÇÃO
+As páginas são imagens (não texto selecionável/editável). Essa é a melhor
+maneira de garantir fidelidade visual ao PDF aprovado.
